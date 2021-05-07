@@ -1,4 +1,4 @@
-FROM node:14-alpine as base
+FROM node:16-alpine as base
 
 WORKDIR /usr/context
 
@@ -32,7 +32,7 @@ COPY package.json yarn.lock ./
 COPY patches/ ./patches/
 RUN yarn
 
-FROM node:14-alpine
+FROM node:16-alpine
 
 WORKDIR /usr/app
 
